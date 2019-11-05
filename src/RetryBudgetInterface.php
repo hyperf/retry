@@ -12,7 +12,9 @@ declare(strict_types=1);
 
 namespace Hyperf\Retry;
 
-interface StrategyInterface
+interface RetryBudgetInterface
 {
-    public function sleep(): void;
+    public function produce(): void;
+
+    public function consume(): bool;
 }
